@@ -140,12 +140,17 @@ function checkScore(){
     let finalScore = (score/5)*100;
 
     let text = "";
+let kategori = "";
 
-    if(finalScore >= 80){
-        text = "🎉 Lulus! Nilai kamu: " + finalScore;
-    } else {
-        text = "❌ Belum lulus. Nilai kamu: " + finalScore;
-    }
+if(finalScore >= 80){
+    kategori = "🎉 LULUS";
+} else if(finalScore >= 60){
+    kategori = "⚠️ CUKUP";
+} else {
+    kategori = "❌ REMEDIAL";
+}
+
+text = kategori + "<br>Nilai kamu: " + finalScore;
 
     document.getElementById("result").innerHTML =
 "<div style='background:#fff;padding:15px;border-radius:10px;margin-top:15px;box-shadow:0 4px 10px rgba(0,0,0,0.1)'>" +
