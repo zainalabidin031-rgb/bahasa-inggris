@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Kuis</title>
+<title>Kuis Bahasa Inggris</title>
 
 <style>
 body{
@@ -31,16 +31,35 @@ nav a{
 }
 
 .container{
-    max-width:900px;
+    max-width:800px;
     margin:auto;
-    padding:40px;
+    padding:20px;
 }
 
 .card{
     background:white;
     padding:20px;
+    margin-bottom:15px;
     border-radius:12px;
-    box-shadow:0 4px 12px rgba(0,0,0,0.1);
+    box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+button{
+    padding:10px 15px;
+    background:#3498db;
+    color:white;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+#result{
+    font-size:20px;
+    margin-top:20px;
 }
 </style>
 
@@ -49,7 +68,7 @@ nav a{
 <body>
 
 <header>
-<h2>Kuis Bahasa Inggris</h2>
+<h2>Kuis Bahasa Inggris (5 Soal)</h2>
 </header>
 
 <nav>
@@ -60,13 +79,76 @@ nav a{
 
 <div class="container">
 
-<h2>Latihan Kuis</h2>
+<!-- SOAL 1 -->
+<div class="card">
+<p>1. What is the English of "Buku"?</p>
+<input type="radio" name="q1" value="0"> Pen<br>
+<input type="radio" name="q1" value="1"> Book<br>
+<input type="radio" name="q1" value="0"> Chair<br>
+</div>
 
-<a href="https://zainalabidin031-rgb.github.io/kuis-bahasa-inggris/" target="_blank">
-Mulai Kuis
-</a>
+<!-- SOAL 2 -->
+<div class="card">
+<p>2. What is "Apple" in Indonesian?</p>
+<input type="radio" name="q2" value="1"> Apel<br>
+<input type="radio" name="q2" value="0"> Jeruk<br>
+<input type="radio" name="q2" value="0"> Mangga<br>
+</div>
+
+<!-- SOAL 3 -->
+<div class="card">
+<p>3. Choose the correct greeting:</p>
+<input type="radio" name="q3" value="1"> Good morning<br>
+<input type="radio" name="q3" value="0"> Good night<br>
+<input type="radio" name="q3" value="0"> Good eating<br>
+</div>
+
+<!-- SOAL 4 -->
+<div class="card">
+<p>4. What color is the sky?</p>
+<input type="radio" name="q4" value="1"> Blue<br>
+<input type="radio" name="q4" value="0"> Red<br>
+<input type="radio" name="q4" value="0"> Green<br>
+</div>
+
+<!-- SOAL 5 -->
+<div class="card">
+<p>5. I ___ a student.</p>
+<input type="radio" name="q5" value="1"> am<br>
+<input type="radio" name="q5" value="0"> is<br>
+<input type="radio" name="q5" value="0"> are<br>
+</div>
+
+<button onclick="checkScore()">Lihat Nilai</button>
+
+<div id="result"></div>
 
 </div>
+
+<script>
+function checkScore(){
+    let score = 0;
+
+    for(let i=1;i<=5;i++){
+        let answer = document.querySelector('input[name="q'+i+'"]:checked');
+        if(answer){
+            score += parseInt(answer.value);
+        }
+    }
+
+    let finalScore = (score/5)*100;
+
+    let text = "";
+
+    if(finalScore >= 80){
+        text = "🎉 Lulus! Nilai kamu: " + finalScore;
+    } else {
+        text = "❌ Belum lulus. Nilai kamu: " + finalScore;
+    }
+
+    document.getElementById("result").innerHTML = text;
+}
+</script>
 
 </body>
 </html>
