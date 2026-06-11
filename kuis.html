@@ -78,7 +78,11 @@ button:hover{
 </nav>
 
 <div class="container">
-
+<div class="card">
+<h3>Data Peserta</h3>
+<input type="text" id="nama" placeholder="Masukkan nama kamu"
+style="padding:10px;width:100%;max-width:300px;">
+</div>
 <!-- SOAL 1 -->
 <div class="card">
 <p>1. What is the English of "Buku"?</p>
@@ -129,6 +133,12 @@ button:hover{
 <script>
 function submitQuiz(){
     let score = 0;
+    let nama = document.getElementById("nama").value;
+
+if(nama.trim() === ""){
+    alert("Silakan isi nama terlebih dahulu!");
+    return;
+}
 document.querySelector("button").disabled = true;
     for(let i=1;i<=5;i++){
         let answer = document.querySelector('input[name="q'+i+'"]:checked');
@@ -150,7 +160,10 @@ if(finalScore >= 80){
     kategori = "❌ REMEDIAL";
 }
 
-text = kategori + "<br>Nilai kamu: " + finalScore;
+text =
+"Selamat, <b>" + nama + "</b><br><br>" +
+kategori +
+"<br>Nilai kamu: " + finalScore;
 
     document.getElementById("result").innerHTML =
 "<div style='background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.15);text-align:center;font-size:18px;margin-top:20px'>" +
