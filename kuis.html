@@ -17,19 +17,6 @@ header{
     text-align:center;
 }
 
-nav{
-    background:#3498db;
-    padding:10px;
-    text-align:center;
-}
-
-nav a{
-    color:white;
-    margin:10px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
 .container{
     max-width:800px;
     margin:auto;
@@ -68,46 +55,32 @@ button:hover{
 <body>
 
 <header>
-<h2>Kuis Bahasa Inggris (5 Soal)</h2>
+<h2>Kuis Bahasa Inggris</h2>
 </header>
 
-<nav>
-<a href="index.html">Home</a>
-<a href="kuis.html">Kuis</a>
-<a href="tentang.html">Tentang</a>
-</nav>
-
 <div class="container">
+
 <div class="card">
-<h3>Data Peserta</h3>
-<input type="text" id="nama" placeholder="Masukkan nama kamu"
-style="padding:10px;width:100%;max-width:300px;">
-</div>
-<!-- SOAL 1 -->
-<div class="card">
-<p>1. What is the English of "Buku"?</p>
-<input type="radio" name="q1" value="0"> Pen<br>
-<input type="radio" name="q1" value="1"> Book<br>
-<input type="radio" name="q1" value="0"> Chair<br>
+<p>1. What is "Book" in Indonesian?</p>
+<input type="radio" name="q1" value="1"> Buku<br>
+<input type="radio" name="q1" value="0"> Meja<br>
+<input type="radio" name="q1" value="0"> Kursi<br>
 </div>
 
-<!-- SOAL 2 -->
 <div class="card">
-<p>2. What is "Apple" in Indonesian?</p>
+<p>2. What is "Apple"?</p>
 <input type="radio" name="q2" value="1"> Apel<br>
+<input type="radio" name="q2" value="0"> Pisang<br>
 <input type="radio" name="q2" value="0"> Jeruk<br>
-<input type="radio" name="q2" value="0"> Mangga<br>
 </div>
 
-<!-- SOAL 3 -->
 <div class="card">
-<p>3. Choose the correct greeting:</p>
-<input type="radio" name="q3" value="1"> Good morning<br>
-<input type="radio" name="q3" value="0"> Good night<br>
-<input type="radio" name="q3" value="0"> Good eating<br>
+<p>3. "Good morning" artinya?</p>
+<input type="radio" name="q3" value="1"> Selamat pagi<br>
+<input type="radio" name="q3" value="0"> Selamat malam<br>
+<input type="radio" name="q3" value="0"> Selamat tinggal<br>
 </div>
 
-<!-- SOAL 4 -->
 <div class="card">
 <p>4. What color is the sky?</p>
 <input type="radio" name="q4" value="1"> Blue<br>
@@ -115,7 +88,6 @@ style="padding:10px;width:100%;max-width:300px;">
 <input type="radio" name="q4" value="0"> Green<br>
 </div>
 
-<!-- SOAL 5 -->
 <div class="card">
 <p>5. I ___ a student.</p>
 <input type="radio" name="q5" value="1"> am<br>
@@ -123,30 +95,17 @@ style="padding:10px;width:100%;max-width:300px;">
 <input type="radio" name="q5" value="0"> are<br>
 </div>
 
-<button id="submitBtn" onclick="submitQuiz()">Submit Ujian</button>
+<button onclick="submitQuiz()">Submit</button>
 
 <div id="result"></div>
-<br><br>
-<button onclick="location.reload()">Ulangi Kuis</button>
+
+<button onclick="location.reload()">Ulangi</button>
+
 </div>
 
 <script>
 function submitQuiz(){
-
-    let namaInput = document.getElementById("nama");
-
-    if(!namaInput || namaInput.value.trim() === ""){
-        alert("⚠️ Silakan isi nama terlebih dahulu!");
-        return;
-    }
-
-    let nama = namaInput.value;
     let score = 0;
-
-    let btn = document.querySelector("button");
-if(btn){
-    btn.disabled = true;
-}
 
     for(let i=1;i<=5;i++){
         let answer = document.querySelector('input[name="q'+i+'"]:checked');
@@ -155,25 +114,22 @@ if(btn){
         }
     }
 
-    let finalScore = (score / 5) * 100;
+    let finalScore = (score/5)*100;
 
     let kategori = "";
 
     if(finalScore >= 80){
-        kategori = "🎉 LULUS";
+        kategori = "LULUS 🎉";
     } else if(finalScore >= 60){
-        kategori = "⚠️ CUKUP";
+        kategori = "CUKUP ⚠️";
     } else {
-        kategori = "❌ REMEDIAL";
+        kategori = "REMEDIAL ❌";
     }
 
-    let text =
-        "Selamat, <b>" + nama + "</b><br><br>" +
-        kategori +
-        "<br>Nilai kamu: " + finalScore;
-
     document.getElementById("result").innerHTML =
-    "<div style='background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.15);text-align:center;font-size:18px;margin-top:20px'>" +
-    text +
-    "</div>";
+        "Nilai kamu: " + finalScore + "<br>" + kategori;
 }
+</script>
+
+</body>
+</html>
