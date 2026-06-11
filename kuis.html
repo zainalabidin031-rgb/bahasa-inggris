@@ -26,12 +26,17 @@ header{
 .card{
     background:white;
     padding:20px;
-    margin-bottom:15px;
-    border-radius:12px;
+    margin-bottom:18px;
+    border-radius:15px;
     box-shadow:0 4px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
 }
 
-```css
+.card:hover{
+    transform:translateY(-3px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.15);
+}
+
 button{
     padding:12px 20px;
     background:#3498db;
@@ -73,6 +78,11 @@ button:hover{
 <a href="kuis.html" style="color:white;margin:10px;text-decoration:none;font-weight:bold;">📝 Kuis</a>
 <a href="tentang.html" style="color:white;margin:10px;text-decoration:none;font-weight:bold;">ℹ️ Tentang</a>
 </nav>
+```html
+<div style="text-align:center;padding:20px;">
+    <h1>📘 Kuis Bahasa Inggris Kelas 5 SD</h1>
+    <p>Jawablah semua pertanyaan dengan teliti, lalu tekan tombol <b>Submit</b>.</p>
+</div>
 
 
 <div class="container">
@@ -309,5 +319,8 @@ function submitQuiz(){
 
 }
 </script>
+    <footer style="background:#2c3e50;color:white;text-align:center;padding:15px;margin-top:30px;">
+    © 2026 Kuis Bahasa Inggris Kelas 5 SD
+</footer>
 </body>
 </html>
