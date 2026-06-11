@@ -55,10 +55,6 @@ button:hover{
     transform:scale(1.05);
 }
 
-button:hover{
-    background:#2980b9;
-}
-
 #result{
     font-size:20px;
     margin-top:20px;
@@ -78,7 +74,7 @@ button:hover{
 <a href="kuis.html" style="color:white;margin:10px;text-decoration:none;font-weight:bold;">📝 Kuis</a>
 <a href="tentang.html" style="color:white;margin:10px;text-decoration:none;font-weight:bold;">ℹ️ Tentang</a>
 </nav>
-```html
+
 <div style="text-align:center;padding:20px;">
     <h1>📘 Kuis Bahasa Inggris Kelas 5 SD</h1>
     <p>Jawablah semua pertanyaan dengan teliti, lalu tekan tombol <b>Submit</b>.</p>
@@ -311,7 +307,7 @@ function submitQuiz(){
     `
     <h3>Hasil Kuis</h3>
     <p>Jawaban Benar: ${score} dari 25</p>
-    <p>Nilai: ${finalScore}</p>
+    <p>Nilai: ${finalScore}%</p>
     <p><strong>${kategori}</strong></p>
     <p>${pesan}</p>
     `;
