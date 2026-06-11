@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materi Tema Sekolah</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+nav{
+    background:#3498db;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table, th, td{
+    border:1px solid #ccc;
+}
+
+th, td{
+    padding:10px;
+    text-align:left;
+}
+
+button{
+    background:#3498db;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+footer{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2>📚 Materi Bahasa Inggris - Tema Sekolah</h2>
+</header>
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="kuis-sekolah.html">📝 Kuis</a>
+<a href="tentang.html">ℹ️ Tentang</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h3>Kosakata (Vocabulary)</h3>
+
+<table>
+<tr>
+<th>Bahasa Inggris</th>
+<th>Bahasa Indonesia</th>
+</tr>
+
+<tr><td>School</td><td>Sekolah</td></tr>
+<tr><td>Classroom</td><td>Ruang kelas</td></tr>
+<tr><td>Teacher</td><td>Guru</td></tr>
+<tr><td>Student</td><td>Siswa</td></tr>
+<tr><td>Book</td><td>Buku</td></tr>
+<tr><td>Pencil</td><td>Pensil</td></tr>
+<tr><td>Eraser</td><td>Penghapus</td></tr>
+<tr><td>Bag</td><td>Tas</td></tr>
+<tr><td>Desk</td><td>Meja</td></tr>
+<tr><td>Chair</td><td>Kursi</td></tr>
+<tr><td>Library</td><td>Perpustakaan</td></tr>
+<tr><td>Notebook</td><td>Buku tulis</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Contoh Kalimat (Examples)</h3>
+
+<ul>
+<li>I go to school every day. → Saya pergi ke sekolah setiap hari.</li>
+<li>My teacher is very kind. → Guru saya sangat baik.</li>
+<li>This is my book. → Ini adalah buku saya.</li>
+<li>The students study in the classroom. → Para siswa belajar di ruang kelas.</li>
+<li>I write with a pencil. → Saya menulis dengan pensil.</li>
+<li>We read books in the library. → Kami membaca buku di perpustakaan.</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h3>Tips Belajar</h3>
+
+<p>
+Hafalkan kosakata sekolah sedikit demi sedikit setiap hari.
+Cobalah membuat kalimat sederhana menggunakan kata-kata tersebut
+agar lebih mudah diingat.
+</p>
+
+</div>
+
+<button onclick="window.location.href='kuis-sekolah.html'">
+📝 Mulai Kuis Sekolah
+</button>
+
+</div>
+
+<footer>
+© 2026 Website Belajar Bahasa Inggris Kelas 5 SD
+</footer>
+
+</body>
+</html>
