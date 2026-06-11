@@ -132,14 +132,18 @@ style="padding:10px;width:100%;max-width:300px;">
 
 <script>
 function submitQuiz(){
+
     let score = 0;
+
     let nama = document.getElementById("nama").value;
 
-if(nama.trim() === ""){
-    alert("Silakan isi nama terlebih dahulu!");
-    return;
-}
-document.querySelector("button").disabled = true;
+    if(nama.trim() === ""){
+        alert("Silakan isi nama terlebih dahulu!");
+        return;
+    }
+
+    document.getElementById("submitBtn").disabled = true;
+
     for(let i=1;i<=5;i++){
         let answer = document.querySelector('input[name="q'+i+'"]:checked');
         if(answer){
@@ -147,28 +151,28 @@ document.querySelector("button").disabled = true;
         }
     }
 
-    let finalScore = (score/5)*100;
+    let finalScore = (score / 5) * 100;
 
-    let text = "";
-let kategori = "";
+    let kategori = "";
 
-if(finalScore >= 80){
-    kategori = "🎉 LULUS";
-} else if(finalScore >= 60){
-    kategori = "⚠️ CUKUP";
-} else {
-    kategori = "❌ REMEDIAL";
-}
+    if(finalScore >= 80){
+        kategori = "🎉 LULUS";
+    } else if(finalScore >= 60){
+        kategori = "⚠️ CUKUP";
+    } else {
+        kategori = "❌ REMEDIAL";
+    }
 
-text =
-"Selamat, <b>" + nama + "</b><br><br>" +
-kategori +
-"<br>Nilai kamu: " + finalScore;
+    let text =
+        "Selamat, <b>" + nama + "</b><br><br>" +
+        kategori +
+        "<br>Nilai kamu: " + finalScore;
 
     document.getElementById("result").innerHTML =
-"<div style='background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.15);text-align:center;font-size:18px;margin-top:20px'>" +
-text +
-"</div>";
+    "<div style='background:white;padding:20px;border-radius:12px;box-shadow:0 4px 10px rgba(0,0,0,0.15);text-align:center;font-size:18px;margin-top:20px'>" +
+    text +
+    "</div>";
+}
 }
 </script>
 
