@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Materi Tema Masyarakat</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f4f6f9;
+}
+
+header{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+
+nav{
+    background:#3498db;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:10px;
+    font-weight:bold;
+}
+
+.container{
+    max-width:900px;
+    margin:auto;
+    padding:20px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    margin-bottom:20px;
+    border-radius:10px;
+    box-shadow:0 3px 8px rgba(0,0,0,0.1);
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+table, th, td{
+    border:1px solid #ccc;
+}
+
+th, td{
+    padding:10px;
+    text-align:left;
+}
+
+button{
+    background:#3498db;
+    color:white;
+    border:none;
+    padding:10px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#2980b9;
+}
+
+footer{
+    background:#2c3e50;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+<h2>🌍 Materi Bahasa Inggris - Tema Masyarakat dan Lingkungan</h2>
+</header>
+
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="kuis-masyarakat.html">📝 Kuis</a>
+<a href="tentang.html">ℹ️ Tentang</a>
+</nav>
+
+<div class="container">
+
+<div class="card">
+<h3>Kosakata (Vocabulary)</h3>
+
+<table>
+<tr>
+<th>Bahasa Inggris</th>
+<th>Bahasa Indonesia</th>
+</tr>
+
+<tr><td>Community</td><td>Masyarakat</td></tr>
+<tr><td>Neighbor</td><td>Tetangga</td></tr>
+<tr><td>Park</td><td>Taman</td></tr>
+<tr><td>Market</td><td>Pasar</td></tr>
+<tr><td>Hospital</td><td>Rumah Sakit</td></tr>
+<tr><td>Police Officer</td><td>Polisi</td></tr>
+<tr><td>Doctor</td><td>Dokter</td></tr>
+<tr><td>Farmer</td><td>Petani</td></tr>
+<tr><td>Tree</td><td>Pohon</td></tr>
+<tr><td>River</td><td>Sungai</td></tr>
+<tr><td>Trash Bin</td><td>Tempat Sampah</td></tr>
+<tr><td>Clean</td><td>Bersih</td></tr>
+<tr><td>Dirty</td><td>Kotor</td></tr>
+<tr><td>Recycle</td><td>Mendaur Ulang</td></tr>
+<tr><td>Environment</td><td>Lingkungan</td></tr>
+</table>
+</div>
+
+<div class="card">
+<h3>Contoh Kalimat (Examples)</h3>
+
+<ul>
+<li>The park is clean. → Taman itu bersih.</li>
+<li>My neighbor is very friendly. → Tetangga saya sangat ramah.</li>
+<li>We throw rubbish into the trash bin. → Kita membuang sampah ke tempat sampah.</li>
+<li>The doctor works in a hospital. → Dokter bekerja di rumah sakit.</li>
+<li>Farmers grow rice in the field. → Petani menanam padi di sawah.</li>
+<li>We should plant more trees. → Kita harus menanam lebih banyak pohon.</li>
+<li>Let's keep our environment clean. → Mari menjaga lingkungan kita tetap bersih.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>Tips Belajar</h3>
+
+<p>
+Pelajari kosakata tentang masyarakat dan lingkungan setiap hari.
+Gunakan kata-kata tersebut dalam percakapan sederhana dan biasakan menjaga kebersihan lingkungan sekitar sebagai bentuk penerapannya.
+</p>
+
+</div>
+
+<button onclick="window.location.href='kuis-masyarakat.html'">
+📝 Mulai Kuis Masyarakat
+</button>
+
+</div>
+
+<footer>
+© 2026 Website Belajar Bahasa Inggris Kelas 5 SD
+</footer>
+
+</body>
+</html>
