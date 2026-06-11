@@ -133,14 +133,15 @@ style="padding:10px;width:100%;max-width:300px;">
 <script>
 function submitQuiz(){
 
-    let score = 0;
+    let namaInput = document.getElementById("nama");
 
-    let nama = document.getElementById("nama").value;
-
-    if(nama.trim() === ""){
-        alert("Silakan isi nama terlebih dahulu!");
+    if(!namaInput || namaInput.value.trim() === ""){
+        alert("⚠️ Silakan isi nama terlebih dahulu!");
         return;
     }
+
+    let nama = namaInput.value;
+    let score = 0;
 
     document.getElementById("submitBtn").disabled = true;
 
@@ -173,8 +174,3 @@ function submitQuiz(){
     text +
     "</div>";
 }
-}
-</script>
-
-</body>
-</html>
