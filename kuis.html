@@ -112,10 +112,12 @@ button:hover{
 
 <script>
 function submitQuiz(){
+
     let score = 0;
 
     for(let i=1;i<=5;i++){
         let answer = document.querySelector('input[name="q'+i+'"]:checked');
+
         if(answer){
             score += parseInt(answer.value);
         }
@@ -124,19 +126,31 @@ function submitQuiz(){
     let finalScore = (score/5)*100;
 
     let kategori = "";
+    let pesan = "";
 
     if(finalScore >= 80){
         kategori = "LULUS 🎉";
-    } else if(finalScore >= 60){
+        pesan = "Excellent! Bahasa Inggris kamu sudah bagus.";
+    }
+    else if(finalScore >= 60){
         kategori = "CUKUP ⚠️";
-    } else {
+        pesan = "Lumayan, terus latihan ya.";
+    }
+    else{
         kategori = "REMEDIAL ❌";
+        pesan = "Jangan menyerah, coba ulangi lagi.";
     }
 
     document.getElementById("result").innerHTML =
-        "Nilai kamu: " + finalScore + "<br>" + kategori;
+    `
+    <h3>Hasil Kuis</h3>
+    <p>Jawaban Benar: ${score} dari 5</p>
+    <p>Nilai: ${finalScore}</p>
+    <p><strong>${kategori}</strong></p>
+    <p>${pesan}</p>
+    `;
+
 }
 </script>
-
 </body>
 </html>
