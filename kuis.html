@@ -102,7 +102,7 @@ button:hover{
 <input type="radio" name="q5" value="0"> are<br>
 </div>
 
-<button onclick="submitQuiz()">Submit</button>
+<button id="submitBtn" onclick="submitQuiz()">Submit</button>
 
 <div id="result"></div>
 
@@ -116,12 +116,17 @@ function submitQuiz(){
     let score = 0;
 
     for(let i=1;i<=5;i++){
-        let answer = document.querySelector('input[name="q'+i+'"]:checked');
 
-        if(answer){
-            score += parseInt(answer.value);
-        }
+    let answer = document.querySelector('input[name="q'+i+'"]:checked');
+
+    if(!answer){
+        alert("Silakan jawab semua pertanyaan terlebih dahulu!");
+        return;
     }
+
+    score += parseInt(answer.value);
+
+}
 
     let finalScore = (score/5)*100;
 
@@ -149,6 +154,7 @@ function submitQuiz(){
     <p><strong>${kategori}</strong></p>
     <p>${pesan}</p>
     `;
+    document.getElementById("submitBtn").style.display = "none";
 
 }
 </script>
